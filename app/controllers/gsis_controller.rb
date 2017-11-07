@@ -1,0 +1,3 @@
+class GsisController < ApplicationController
+
+end

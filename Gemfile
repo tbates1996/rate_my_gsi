@@ -28,7 +28,8 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
-
+#Allow to make models votable so that we can implement voting on reviews
+gem 'acts_as_votable', '~> 0.11.1'
 
 #Bootstrap and sass for CSS
 gem 'bootstrap-sass', '~> 3.3.7'
@@ -52,6 +53,9 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'sqlite3'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+
 end
 group :production do 
 	gem 'pg'
