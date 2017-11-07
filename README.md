@@ -1,24 +1,29 @@
-# README
+# Rate My GSI
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app is a solution to having terrible GSI's. While you have all the information you could possibly want about a professor, little is probably known about your GSI. This app lets students leave reviews about GSIs and the classes they teach. 
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+Follow these steps to install the app and get a version running on your machine. 
 
-* System dependencies
+### Prerequisites
 
-* Configuration
+First clone this
+```
+Give examples
+```
 
-* Database creation
+### Installing
 
-* Database initialization
 
-* How to run the test suite
+```
+Give the example
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+And repeat
 
-* Deployment instructions
+```
+until finished
+```
 
-* ...
+End with an example of getting some data out of the system or using it for a little demo
