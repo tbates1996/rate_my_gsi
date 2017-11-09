@@ -11,7 +11,7 @@ Follow these steps to install the app and get a version running on your machine.
 First fork this repo and clone it to you device. Once you have the clone add the upstream path by running the following command in your directory
 ```
 $ git remote add upstream https://github.com/tbates1996/rate_my_gsi.git
-
+```
 Next, run the bundler to install all the required gems:
 ```
 $ bundle install --without production
