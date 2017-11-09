@@ -1,6 +1,8 @@
 # Rate My GSI
 
-This app is a solution to having terrible GSI's. While you have all the information you could possibly want about a professor, little is probably known about your GSI. This app lets students leave reviews about GSIs and the classes they teach. 
+This app is a solution to having terrible GSI's. While you have all the information you could possibly want about a professor, little is probably known about your GSI. This app lets students leave reviews about GSIs and the classes they teach.
+### Link to production site
+[Rate My GSI](https://shielded-dusk-57231.herokuapp.com/) 
 
 ## Getting Started
 
