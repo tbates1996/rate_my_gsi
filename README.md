@@ -59,3 +59,4 @@ git checkout newfeature
 git rebase master
 ```
 To submit your pull request to the upstream repo go to the github page for your fork and submit a pull request to the upstream for your branch. Once approved, your branch will be merged into the mast of the main repo.
+[See this GitHub article for reference](https://help.github.com/articles/creating-a-pull-request/)
