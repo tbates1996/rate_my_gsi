@@ -4,14 +4,15 @@
 
 			<ul class="nav navbar-nav navbar-right">
 				<% if user_signed_in? %>
-					<li> <%= link_to 'Logout', logout_path, class: "btn btn-navbar", method: :delete %> </li>
+				<li><%= link_to 'Profile', current_user, class: 'btn btn-nabbar' %></li>
+				<li> <%= link_to 'Logout', logout_path, class: "btn btn-navbar", method: :delete %> </li>
 				<% else %>	
      				<li>
 						<%= link_to 'Login',login_path, class: "btn btn-navbar" %>
 				    </li>
 					<li>
      				  	<%= link_to 'Signup',  new_user_registration_path, class: 'btn btn-navbar'%>
-				  	</li>
+					</li>
 				<% end %>
 			  </ul>	  
 	  </div>
