@@ -8,5 +8,7 @@ Rails.application.routes.draw do
 	  get "login", to: "devise/sessions#new"
       delete 'logout', to: 'devise/sessions#destroy'  
   end
-
+  resources :gsis
+  resources :reviews
+  resources :courses
 end
