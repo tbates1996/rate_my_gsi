@@ -1,0 +1,7 @@
+<% @reviews.each do |review| %>
+	<h2><%= review.title %></h2>
+	<p><%= review.body %></p>
+	<%= link_to "edit", edit_review_path(review.id) %>
+	<%= link_to "Delete", review, :confirm => "Are you sure?", :method => :delete %>
+
+<% end %>
