@@ -13,7 +13,7 @@ class ReviewsController < ApplicationController
 		review = Review.new(review_params)
 		if review.save
 			flash[:success] = "Review was created."
-			redirect_to 'index'
+			redirect_to action: "index"
 		else
 		  flash[:danger] = "Review was not created."
 		end
