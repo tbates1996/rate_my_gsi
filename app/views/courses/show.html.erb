@@ -1,8 +1,17 @@
 <%= @course.subject %> <%= @course.course_number %>
 <br />
-<%= @course.school %>
-<%= @course.reviews.each do |review| %>
-	<h1>Review</h1>
-<% end %>
-
-	
+<div class="col-md-3">
+	<p>GSIs</p>
+	<%= link_to "New GSI", new_gsi_path(courseid: @course.id), class: "btn btn-primary"%>
+	<br />
+	<% @course.gsis.each do |gsi| %>
+		<%= gsi.name %>
+		<br />
+	<% end %>
+</div>
+<div class="col-md-9">
+	<%= @course.school %>
+	<% @course.reviews.each do |review| %>
+		<h1>Review</h1>
+	<% end %>
+</div>

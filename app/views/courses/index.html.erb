@@ -2,9 +2,9 @@
 <%= link_to "New Course", new_course_path %>
 <br />
 <% @courses.each do |course| %>
-	<%= course.subject %> <%= course.course_number %>
-	<br />
+	<%= link_to "#{course.subject} #{course.course_number}", course %>
 	<%= course.school %>
+	</br>
 	<%= link_to "edit", edit_course_path(course) %>
     <%= link_to "Delete", course, :confirm => "Are you sure?", :method => :delete %>
 <% end %>

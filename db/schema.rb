@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171125024712) do
+ActiveRecord::Schema.define(version: 20171125195626) do
 
   create_table "courses", force: :cascade do |t|
     t.string "subject"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20171125024712) do
     t.datetime "updated_at", null: false
     t.integer "ranking"
     t.integer "course_id"
+    t.string "school"
     t.index ["course_id"], name: "index_gsis_on_course_id"
   end
 

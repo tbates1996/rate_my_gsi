@@ -1,4 +1,4 @@
 class Review < ApplicationRecord
-	belongs_to :users
-	belongs_to :gsis
+	belongs_to :user
+	belongs_to :gsi
 end

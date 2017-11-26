@@ -1,4 +1,8 @@
 class GsisController < ApplicationController
+	
+  def show
+  	@gsi = Gsi.find(params[:id])
+  end
 
   def index
     @gsis = Gsi.all
@@ -44,7 +48,7 @@ class GsisController < ApplicationController
   private 
   
   def gsi_params
-	params.require(:gsi).permit(:name)
+	params.require(:gsi).permit(:name,:school, :course_id)
   end
 
 

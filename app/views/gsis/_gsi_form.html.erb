@@ -1,6 +1,11 @@
 <%= form_for @gsi do |f| %>
+	<%= f.hidden_field :course_id, value: params[:courseid] %>
+
 	<%= f.label :name %>
 	<%= f.text_field :name %>
+	<br />
+	<%= f.label :school %>
+	<%= f.text_field :school %>
 
-	<%= f.submit "Submit", class: "btn btn-primary" %>
+<%= f.submit "Submit", class: "btn btn-primary" %>
 <% end %>

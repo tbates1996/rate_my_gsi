@@ -13,18 +13,16 @@ class ReviewsController < ApplicationController
 		review = Review.new(review_params)
 		if current_user
 			review.user_id = current_user.id
-			if review.save
+
+			if review.save!
 				flash[:success] = "Review was created."
-				redirect_to action: "index"
 			else
 		  		flash[:danger] = "Review was not created."
 			end
 		else
 			flash[:danger] = "Must be logged in to create a review"
-			redirect_to session.delete(:return_to)
 		end
-
-
+		redirect_to session.delete(:return_to)
 	end
 
 	def edit

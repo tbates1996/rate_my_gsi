@@ -1,5 +1,8 @@
 <h1>GSI</h1>
+<%= link_to "New", new_gsi_path %>
+<br />
 <% @gsis.each do |gsi| %>
-    <%= gsi.name%>
+    <%= link_to gsi.name, gsi %>
+	<%= gsi.school %>
     <br/>
 <% end %>
