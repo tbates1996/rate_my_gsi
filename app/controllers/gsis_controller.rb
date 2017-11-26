@@ -22,7 +22,6 @@ class GsisController < ApplicationController
 	  flash[:danger] = "GSI was not created."
 	  redirect_to action: 'new'
 	end
-
   end
   
   def update
@@ -31,11 +30,10 @@ class GsisController < ApplicationController
 	  flash[:success] = "GSI was updated."
 	  redirect_to action: "index"
 	end
-
   end
 
   def edit
-	@gsi = Gsi.find(parmas[:id])
+	@gsi = Gsi.find(params[:id])
   end
 
   def destroy

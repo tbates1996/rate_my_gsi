@@ -1,10 +1,10 @@
 <h1>Courses</h1>
-<%= link_to "New Course", new_course_path %>
+<%= link_to "New Course", new_course_path , class:"btn btn-primary"%>
 <br />
 <% @courses.each do |course| %>
 	<%= link_to "#{course.subject} #{course.course_number}", course %>
 	<%= course.school %>
 	</br>
 	<%= link_to "edit", edit_course_path(course) %>
-    <%= link_to "Delete", course, :confirm => "Are you sure?", :method => :delete %>
+    <%= link_to "delete", course, :confirm => "Are you sure?", :method => :delete %>
 <% end %>

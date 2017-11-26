@@ -2,10 +2,10 @@
 <br />
 <div class="col-md-3">
 	<p>GSIs</p>
-	<%= link_to "New GSI", new_gsi_path(courseid: @course.id), class: "btn btn-primary"%>
+	<%= link_to "New GSI", new_gsi_path(courseid: @course.id, school:@course.school), class: "btn btn-primary"%>
 	<br />
 	<% @course.gsis.each do |gsi| %>
-		<%= gsi.name %>
+		<%= link_to gsi.name, gsi %>
 		<br />
 	<% end %>
 </div>

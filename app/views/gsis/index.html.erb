@@ -1,8 +1,9 @@
 <h1>GSI</h1>
-<%= link_to "New", new_gsi_path %>
 <br />
 <% @gsis.each do |gsi| %>
     <%= link_to gsi.name, gsi %>
 	<%= gsi.school %>
+	<%= link_to "edit", edit_gsi_path(gsi) %>
+    <%= link_to "delete", gsi, :confirm => "Are you sure?", :method => :delete %>
     <br/>
 <% end %>

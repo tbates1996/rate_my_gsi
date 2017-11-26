@@ -4,5 +4,13 @@
 </div>
 <div class='col-md-9'>
 	<h1>Reviews</h1>
+	<%= link_to "New Review", new_review_path(gsi_id: @gsi.id) %>
+	<br />
+	<% @gsi.reviews.each do |review| %>
+		<h3><%= review.title %></h3>
+		<br />
+		<%= review.body %>
+		<br />
+	<% end %>
 </div>
 
