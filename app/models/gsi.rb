@@ -3,4 +3,9 @@ class Gsi < ApplicationRecord
   has_many :reviews, dependent: :destroy
   
   validates :name, presence: true
+
+  def total_rating
+	self.reviews.average(:rating)
+  end
+
 end

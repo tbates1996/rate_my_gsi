@@ -14,7 +14,6 @@ class GsisController < ApplicationController
 
   def create
   	gsi = Gsi.new(gsi_params)
-  	gsi.ranking = 0
   	if gsi.save
   	  flash[:success] = "GSI was created"
   	  redirect_to action: "index"
