@@ -9,7 +9,7 @@
 	<% @gsi.reviews.each do |review| %>
 		<h3><%= review.title %> (<%= review.rating %>)</h3>
 		<%= review.body %>
-		<p>Posted by <%= review.user.name%></p>
+		<p>Posted by <%= link_to review.user.name, review.user %></p>
 	<% end %>
 </div>
 

@@ -1,3 +1,12 @@
-<h1><%= current_user.name %></h1>
-<br />
-<p><%= link_to "Edit", edit_user_registration_path(current_user), class:"btn btn-primary"%></p>
+<div class="col-md-3">
+	<h1><%= current_user.name %></h1>
+	<br />
+	<p><%= link_to "Edit", edit_user_registration_path(current_user), class:"btn btn-primary"%></p>
+</div>
+<div class="col-md-9">
+	<h3>Reviews</h3>
+	<% current_user.reviews.each do |review| %>
+			<h4><%= "#{review.title} (rating: #{review.rating})" %></h4>
+			<p><%= review.body %></p>
+	<% end %>
+</div>
