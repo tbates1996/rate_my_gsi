@@ -1,6 +1,6 @@
 <h1>Reviews</h1>
 <% @reviews.each do |review| %>
-	<h2><%= review.title %> (<%= link_to review.gsi.name, review.gsi %>)</h2>  (<%= link_to review.gsi.name, review.gsi %> at <%= review.gsi.school %>)
+	<h2><%= review.title %> (<%= link_to review.gsi.name, review.gsi %>)</h2>
 	<p><%= review.body %></p>
 	<p>Posted by <%= review.user.name%></p>
 	<%= link_to "edit", edit_review_path(review.id) %>
