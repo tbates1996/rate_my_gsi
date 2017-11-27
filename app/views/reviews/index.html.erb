@@ -1,7 +1,8 @@
 <h1>Reviews</h1>
 <% @reviews.each do |review| %>
-	<h2><%= review.title %></h2>
+	<h2><%= review.title %> (<%= review.rating %>)</h2>
 	<p><%= review.body %></p>
+	<p>Posted by <%= review.user.name%> on <%= link_to review.gsi.name, review.gsi %></p>
 	<%= link_to "edit", edit_review_path(review.id) %>
 	<%= link_to "Delete", review, :confirm => "Are you sure?", :method => :delete %>
 <% end %>
