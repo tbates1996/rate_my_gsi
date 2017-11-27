@@ -14,7 +14,7 @@ class ReviewsController < ApplicationController
 		if current_user
 			review.user_id = current_user.id
 
-			if review.save!
+			if review.save
 				flash[:success] = "Review was created."
 			else
 		  		flash[:danger] = "Review was not created."
