@@ -7,10 +7,9 @@
 	<%= link_to "New Review", new_review_path(gsi_id: @gsi.id) %>
 	<br />
 	<% @gsi.reviews.each do |review| %>
-		<h3><%= review.title %></h3>
-		<br />
+		<h3><%= review.title %> (<%= review.rating %>)</h3>
 		<%= review.body %>
-		<br />
+		<p>Posted by <%= review.user.name%></p>
 	<% end %>
 </div>
 
