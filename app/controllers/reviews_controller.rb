@@ -66,7 +66,7 @@ class ReviewsController < ApplicationController
 
 	def decrease
 		@review = Review.find(params[:id])
-		@review.dislikes -= 1
+		@review.dislikes += 1
 		if @review.save
 			flash[:notice] = "Dislike was recorded. Please refresh page to see changes."
 		else

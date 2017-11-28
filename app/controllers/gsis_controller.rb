@@ -5,7 +5,7 @@ class GsisController < ApplicationController
   end
 
   def index
-    @gsis = Gsi.all
+    @gsis = Gsi.search(params[:search]) 
   end
 
   def new

@@ -1,5 +1,12 @@
 <h1>GSI</h1>
 <br />
+<%= form_tag gsis_path, :method => 'get' do %>
+	<p> 
+    	<%= text_field_tag :search, params[:search] %>
+    	<%= submit_tag "Search", :name => nil, class:"btn btn-primary" %>
+  	</p>
+<% end %>
+
 <% @gsis.each do |gsi| %>
     <%= link_to gsi.name, gsi %>
 	<%= gsi.school %>

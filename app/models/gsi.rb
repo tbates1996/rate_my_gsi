@@ -7,5 +7,13 @@ class Gsi < ApplicationRecord
   def total_rating
 	self.reviews.average(:rating)
   end
+  
+  def self.search(search)
+  if search and !search.empty?
+	  where('name LIKE ?', "#{search}")
+	else
+	  all
+	end
+  end
 
 end
