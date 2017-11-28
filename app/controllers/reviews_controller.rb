@@ -1,5 +1,9 @@
 class ReviewsController < ApplicationController
 
+	def show
+		@review = Review.find(params[:id])
+	end
+
 	def index
 		@reviews = Review.all
 	end
@@ -11,6 +15,8 @@ class ReviewsController < ApplicationController
 	def create
 		session[:return_to] ||= request.referer
 		review = Review.new(review_params)
+		review.likes = 0
+		review.dislikes = 0
 		if current_user
 			review.user_id = current_user.id
 
@@ -47,6 +53,27 @@ class ReviewsController < ApplicationController
 	  
 	end
 
+	def increase
+		@review = Review.find(params[:id])
+		@review.likes += 1
+		if @review.save
+			flash[:notice] = "Like was recorded. Please refresh page to see changes."
+		else
+			flash[:danger] = "Review was not created."
+		end
+		redirect_to action: "index"
+	end
+
+	def decrease
+		@review = Review.find(params[:id])
+		@review.dislikes -= 1
+		if @review.save
+			flash[:notice] = "Dislike was recorded. Please refresh page to see changes."
+		else
+			flash[:danger] = "Review was not created."
+		end
+		redirect_to action: "index"
+	end
 	private
 
 	def review_params

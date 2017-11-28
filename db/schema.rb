@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171127171333) do
+ActiveRecord::Schema.define(version: 20171128113811) do
 
   create_table "courses", force: :cascade do |t|
     t.string "subject"
@@ -37,6 +37,8 @@ ActiveRecord::Schema.define(version: 20171127171333) do
     t.datetime "updated_at", null: false
     t.integer "user_id"
     t.integer "gsi_id"
+    t.integer "likes"
+    t.integer "dislikes"
     t.index ["gsi_id"], name: "index_reviews_on_gsi_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
