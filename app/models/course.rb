@@ -7,7 +7,7 @@ class Course < ApplicationRecord
 	validates :subject, presence: true
 
 	def self.search(search)
-			if search and !search.empty?
+	if search and !search.empty?
 	  where('school LIKE ?', "#{search}")
 	else
 	  all

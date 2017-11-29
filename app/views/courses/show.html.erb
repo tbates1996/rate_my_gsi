@@ -1,7 +1,7 @@
-<h1><%= @course.subject %> <%= @course.course_number %></h1>
-<h3><%= @course.school %></h3>
-<br />
 <div class="col-md-3">
+	<h1><%= @course.subject %> <%= @course.course_number %></h1>
+	<h3><%= @course.school %></h3>
+	<br />
 	<h2>GSIs</h2>
 	<%= link_to "New GSI", new_gsi_path(courseid: @course.id, school:@course.school), class: "btn btn-primary"%>
 	<br />

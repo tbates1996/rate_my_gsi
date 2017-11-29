@@ -8,8 +8,8 @@
 <% end %>
 
 <% @gsis.each do |gsi| %>
-    <%= link_to gsi.name, gsi %>
-	<%= gsi.school %>
+	<h5><%= link_to gsi.name, gsi %></h5>
+	School: <%= gsi.school %>
 	<%= link_to "edit", edit_gsi_path(gsi) %>
     <%= link_to "delete", gsi, :confirm => "Are you sure?", :method => :delete %>
     <br/>
