@@ -1,3 +1,60 @@
+Rails Project Write-Up
+
+**Title:** Rate My GSI
+
+**Team​ ​Members:​** Thomas Bates, Victoria Cendejas, Kevin Ponek, Nicholas Truong
+
+**Demo​ ​Link** :​ [https://shielded-dusk-57231.herokuapp.com/](https://shielded-dusk-57231.herokuapp.com/)
+
+**Idea:** ​ ​An application where users can post reviews for GSIs and categorize them by course(s) taught.
+
+**Models​ ​and​ ​Description:**
+
+User
+
+● has name, email, and many reviews
+
+Course
+
+● has school, course number, and subject; has many gsis and gsi reviews
+
+GSI
+
+● belongs to a Course; has name, school, rating, and many reviews
+
+Review
+
+● has title, body, and rating; belongs to a User and to a GSI
+
+**Features:**
+
+● Users can log in
+
+● Users can search for GSIs
+
+● Users can create reviews for GSIs
+
+● Users can add new courses
+
+● Users can create new GSIs for established courses
+
+**#
+[ANNOTATION:
+
+BY &#39;Victoria Cendejas&#39;
+ON &#39;2017-11-29T02:41:11&#39;
+NOTE: &#39;Add in your tasks here, just a few words. Examples from the guidelines: &quot;made users&quot; or &quot;made views and controllers&quot;&#39;] ****Division​ ​of​ ​Labor:**
+
+● Thomas: Worked on users using devise. Styled pages with bootstrap and deployment to heroku.
+
+● Victoria: Composed write-up, helped with trouble-shooting, posted question on piazza
+
+● Kevin: Worked on Reviews controller, model and view. Added validations to models.
+
+● Nicholas: Worked on GSIs controller, view. Worked on landing page. Implemented reviews likes and dislikes
+
+
+
 # Rate My GSI
 
 This app is a solution to having terrible GSI's. While you have all the information you could possibly want about a professor, little is probably known about your GSI. This app lets students leave reviews about GSIs and the classes they teach.
