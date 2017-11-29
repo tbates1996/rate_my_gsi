@@ -38,12 +38,7 @@ Review
 
 ● Users can create new GSIs for established courses
 
-**#
-[ANNOTATION:
-
-BY &#39;Victoria Cendejas&#39;
-ON &#39;2017-11-29T02:41:11&#39;
-NOTE: &#39;Add in your tasks here, just a few words. Examples from the guidelines: &quot;made users&quot; or &quot;made views and controllers&quot;&#39;] ****Division​ ​of​ ​Labor:**
+**Division​ ​of​ ​Labor:**
 
 ● Thomas: Worked on users using devise. Styled pages with bootstrap and deployment to heroku.
 
